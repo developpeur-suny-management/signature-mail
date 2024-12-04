@@ -17,7 +17,7 @@ export default function Home() {
     setSubmittedData(data);
   };
   return (
-    <div className="grid grid-rows-[0px_1fr_0px] items-center justify-items-center min-h-screen">
+    <div className="grid grid-rows-[0px_1fr_0px] justify-items-center min-h-screen pt-8">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start w-full px-16">
         <div className="flex space-x-8 w-full justify-evenly">
           <div className="flex flex-col gap-8 w-2/5">
