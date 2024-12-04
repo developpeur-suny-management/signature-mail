@@ -49,8 +49,13 @@ export function FormResult({ data }: FormResultProps) {
     float: "left",
     height: "16px",
     width: "16px",
-    marginLeft: "4px",
-    marginRight: "4px",
+    minHeight: "16px",
+    minWidth: "16px",
+  };
+  const tdIconStyle: React.CSSProperties = {
+    width: "24px",
+    height: "16px",
+    minWidth: "24px",
   };
 
   const tableStyle: React.CSSProperties = {
@@ -66,7 +71,7 @@ export function FormResult({ data }: FormResultProps) {
   };
 
   return (
-    <div className="w-2/5 rounded-md flex flex flex-col">
+    <div className="w-2/5 rounded-md flex flex flex-col p-8 bg-white">
       {data ? (
         <>
           <div className="flex flex-auto items-center">
@@ -80,22 +85,35 @@ export function FormResult({ data }: FormResultProps) {
             >
               <tbody>
                 <tr>
-                  <td style={{ paddingRight: "16px" }}>
+                  <td
+                    style={{
+                      paddingRight: "4px",
+                      width: "124px",
+                      maxWidth: "124px",
+                    }}
+                  >
                     <img
                       alt="Suny logo"
                       src="https://i.ibb.co/vPX7M2z/suny-logo-150.gif"
                       style={{
                         borderStyle: "solid",
                         borderWidth: "0px",
-                        height: "150px",
-                        width: "150px",
+                        height: "120px",
+                        width: "120px",
+                        minHeight: "120px",
+                        minWidth: "120px",
                       }}
                     />
                   </td>
-                  <td style={{ borderLeft: "1px solid rgb(21, 41, 72)" }}>
+                  <td
+                    style={{
+                      borderLeft: "1px solid rgb(21, 41, 72)",
+                      width: "1px",
+                    }}
+                  >
                     &nbsp;
                   </td>
-                  <td style={{ paddingLeft: "16px" }}>
+                  <td style={{ paddingLeft: "8px" }}>
                     <table
                       align="left"
                       border={0}
@@ -160,7 +178,7 @@ export function FormResult({ data }: FormResultProps) {
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td style={tdIconStyle}>
                                     <img
                                       alt="Email icon"
                                       src="https://i.ibb.co/w4rsjxz/mail.png"
@@ -217,6 +235,18 @@ export function FormResult({ data }: FormResultProps) {
                   </td>
                 </tr>
               </tbody>
+              {data.message && (
+                <tbody>
+                  <tr>
+                    <td
+                      colSpan={3}
+                      style={{ paddingTop: "16px", fontWeight: "600" }}
+                    >
+                      <span style={linkStyle}>{data.message}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              )}
             </table>
           </div>
           <div>
