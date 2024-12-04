@@ -17,4 +17,5 @@ export const formSchema = z.object({
     .string()
     .min(5, { message: "L'adresse doit contenir au moins 5 caractères." }),
   url: z.string().url({ message: "Veuillez entrer une URL valide." }),
+  message: z.string().optional(),
 });
