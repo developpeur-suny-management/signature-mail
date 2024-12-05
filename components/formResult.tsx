@@ -88,8 +88,8 @@ export function FormResult({ data }: FormResultProps) {
                   <td
                     style={{
                       paddingRight: "4px",
-                      width: "124px",
-                      maxWidth: "124px",
+                      width: "104px",
+                      maxWidth: "104px",
                     }}
                   >
                     <img
@@ -98,10 +98,10 @@ export function FormResult({ data }: FormResultProps) {
                       style={{
                         borderStyle: "solid",
                         borderWidth: "0px",
-                        height: "120px",
-                        width: "120px",
-                        minHeight: "120px",
-                        minWidth: "120px",
+                        height: "100px",
+                        width: "100px",
+                        minHeight: "100px",
+                        minWidth: "100px",
                       }}
                     />
                   </td>
