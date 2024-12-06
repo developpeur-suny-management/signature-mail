@@ -15,6 +15,8 @@ import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { formSchema } from "@/components/profileFormSchema";
+import { CircleCheck } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 type ProfileFormProps = {
   onSubmit: (data: z.infer<typeof formSchema>) => void;
@@ -178,17 +180,23 @@ export function ProfileForm({ onSubmit }: ProfileFormProps) {
             )}
           />
         )}
+        {isSubmitted && (
+          <>
+            <Alert variant="success">
+              <CircleCheck className="h-4 w-4" />
+              <AlertTitle>Succès</AlertTitle>
+              <AlertDescription>
+                Votre signature email a été générée avec succès !
+              </AlertDescription>
+            </Alert>
+          </>
+        )}
         <div className="flex gap-4">
           <Button variant="outline" type="button" onClick={handleReset}>
             Effacer le formulaire
           </Button>
           <Button type="submit">Créer signature mail</Button>
         </div>
-        {isSubmitted && (
-          <div className="formResult">
-            <p>Votre formulaire a été soumis avec succès !</p>
-          </div>
-        )}
       </form>
     </Form>
   );

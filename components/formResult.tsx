@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Button } from "../components/ui/button";
 import { Toaster } from "./ui/toaster";
 import { useToast } from "../hooks/use-toast";
+import Steps from "@/components/steps";
 import { z } from "zod";
 import { formSchema } from "@/components/profileFormSchema";
 
@@ -31,7 +32,7 @@ export function FormResult({ data }: FormResultProps) {
       } catch (err) {
         toast({
           variant: "destructive",
-          title: "Copié avec success",
+          title: "Erreur",
           description: "Échec de la copie dans le presse-papiers !",
           duration: 100,
         });
@@ -71,194 +72,200 @@ export function FormResult({ data }: FormResultProps) {
   };
 
   return (
-    <div className="w-2/5 rounded-md flex flex flex-col p-8 bg-white">
+    <div className="w-full lg:w-2/5 lg:mt-28 flex flex-col justify-center">
       {data ? (
-        <>
-          <div className="flex flex-auto items-center">
-            <table
-              ref={tableRef}
-              align="left"
-              border={0}
-              cellPadding="0"
-              cellSpacing="0"
-              style={tableStyle}
-            >
-              <tbody>
-                <tr>
-                  <td
-                    style={{
-                      paddingRight: "4px",
-                      width: "104px",
-                      maxWidth: "104px",
-                    }}
-                  >
-                    <img
-                      alt="Suny logo"
-                      src="https://i.ibb.co/vPX7M2z/suny-logo-150.gif"
-                      style={{
-                        borderStyle: "solid",
-                        borderWidth: "0px",
-                        height: "100px",
-                        width: "100px",
-                        minHeight: "100px",
-                        minWidth: "100px",
-                      }}
-                    />
-                  </td>
-                  <td
-                    style={{
-                      borderLeft: "1px solid rgb(21, 41, 72)",
-                      width: "1px",
-                    }}
-                  >
-                    &nbsp;
-                  </td>
-                  <td style={{ paddingLeft: "8px" }}>
-                    <table
-                      align="left"
-                      border={0}
-                      cellPadding="1"
-                      cellSpacing="4"
-                      style={tableStyle}
-                    >
-                      <tbody>
-                        <tr>
-                          <td>
-                            <strong
-                              style={{
-                                fontWeight: "bold",
-                                color: "#152948",
-                                fontFamily:
-                                  "Poppins, Helvetica, Arial, sans-serif",
-                                textTransform: "uppercase",
-                              }}
-                            >
-                              {data.name}
-                            </strong>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={{ paddingBottom: "16px" }}>
-                            <em
-                              style={{
-                                color: "#152948",
-                                fontFamily:
-                                  "Poppins, Helvetica, Arial, sans-serif",
-                              }}
-                            >
-                              {data.job}
-                            </em>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <table
-                              align="left"
-                              border={0}
-                              cellPadding="2"
-                              cellSpacing="2"
-                              style={tableStyle}
-                            >
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <img
-                                      alt="Phone icon"
-                                      src="https://i.ibb.co/xgBY5L9/phone.png"
-                                      style={iconStyle}
-                                    />
-                                  </td>
-                                  <td>
-                                    <a
-                                      href={"tel:" + data.phoneNumber}
-                                      style={linkStyle}
-                                    >
-                                      <small>{data.phoneNumber}</small>
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style={tdIconStyle}>
-                                    <img
-                                      alt="Email icon"
-                                      src="https://i.ibb.co/w4rsjxz/mail.png"
-                                      style={iconStyle}
-                                    />
-                                  </td>
-                                  <td>
-                                    <a
-                                      href={"mailto:" + data.email}
-                                      style={linkStyle}
-                                    >
-                                      <small>{data.email}</small>
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <img
-                                      alt="address icon"
-                                      src="https://i.ibb.co/rwWTYnz/address.png"
-                                      style={iconStyle}
-                                    />
-                                  </td>
-                                  <td>
-                                    <small style={linkStyle}>
-                                      {data.address}
-                                    </small>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                    <img
-                                      alt="url icon"
-                                      src="https://i.ibb.co/Rpq89fD/site.png"
-                                      style={iconStyle}
-                                    />
-                                  </td>
-                                  <td>
-                                    <a
-                                      href={data.url}
-                                      target="_blank"
-                                      style={linkStyle}
-                                    >
-                                      <small> {data.url}</small>
-                                    </a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-              {data.message && (
+        <div className="flex flex-col gap-6">
+          <div className="rounded-md flex  flex-col p-8 bg-white drop-shadow-lg">
+            <h2 className="text-2xl font-bold text-slate-800 border-b pb-4 border-slate-300">
+              Votre signature
+            </h2>
+            <div className="flex py-12 items-center">
+              <table
+                ref={tableRef}
+                align="left"
+                border={0}
+                cellPadding="0"
+                cellSpacing="0"
+                style={tableStyle}
+              >
                 <tbody>
                   <tr>
                     <td
-                      colSpan={3}
-                      style={{ paddingTop: "16px", fontWeight: "600" }}
+                      style={{
+                        paddingRight: "4px",
+                        width: "104px",
+                        maxWidth: "104px",
+                      }}
                     >
-                      <span style={linkStyle}>{data.message}</span>
+                      <img
+                        alt="Suny logo"
+                        src="https://i.ibb.co/vPX7M2z/suny-logo-150.gif"
+                        style={{
+                          borderStyle: "solid",
+                          borderWidth: "0px",
+                          height: "100px",
+                          width: "100px",
+                          minHeight: "100px",
+                          minWidth: "100px",
+                        }}
+                      />
+                    </td>
+                    <td
+                      style={{
+                        borderLeft: "1px solid rgb(21, 41, 72)",
+                        width: "1px",
+                      }}
+                    >
+                      &nbsp;
+                    </td>
+                    <td style={{ paddingLeft: "8px" }}>
+                      <table
+                        align="left"
+                        border={0}
+                        cellPadding="1"
+                        cellSpacing="4"
+                        style={tableStyle}
+                      >
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong
+                                style={{
+                                  fontWeight: "bold",
+                                  color: "#152948",
+                                  fontFamily:
+                                    "Poppins, Helvetica, Arial, sans-serif",
+                                  textTransform: "uppercase",
+                                }}
+                              >
+                                {data.name}
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={{ paddingBottom: "16px" }}>
+                              <em
+                                style={{
+                                  color: "#152948",
+                                  fontFamily:
+                                    "Poppins, Helvetica, Arial, sans-serif",
+                                }}
+                              >
+                                {data.job}
+                              </em>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table
+                                align="left"
+                                border={0}
+                                cellPadding="2"
+                                cellSpacing="2"
+                                style={tableStyle}
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <img
+                                        alt="Phone icon"
+                                        src="https://i.ibb.co/xgBY5L9/phone.png"
+                                        style={iconStyle}
+                                      />
+                                    </td>
+                                    <td>
+                                      <a
+                                        href={"tel:" + data.phoneNumber}
+                                        style={linkStyle}
+                                      >
+                                        <small>{data.phoneNumber}</small>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={tdIconStyle}>
+                                      <img
+                                        alt="Email icon"
+                                        src="https://i.ibb.co/w4rsjxz/mail.png"
+                                        style={iconStyle}
+                                      />
+                                    </td>
+                                    <td>
+                                      <a
+                                        href={"mailto:" + data.email}
+                                        style={linkStyle}
+                                      >
+                                        <small>{data.email}</small>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <img
+                                        alt="address icon"
+                                        src="https://i.ibb.co/rwWTYnz/address.png"
+                                        style={iconStyle}
+                                      />
+                                    </td>
+                                    <td>
+                                      <small style={linkStyle}>
+                                        {data.address}
+                                      </small>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <img
+                                        alt="url icon"
+                                        src="https://i.ibb.co/Rpq89fD/site.png"
+                                        style={iconStyle}
+                                      />
+                                    </td>
+                                    <td>
+                                      <a
+                                        href={data.url}
+                                        target="_blank"
+                                        style={linkStyle}
+                                      >
+                                        <small> {data.url}</small>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </td>
                   </tr>
                 </tbody>
-              )}
-            </table>
+                {data.message && (
+                  <tbody>
+                    <tr>
+                      <td
+                        colSpan={3}
+                        style={{ paddingTop: "16px", fontWeight: "600" }}
+                      >
+                        <span style={linkStyle}>{data.message}</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                )}
+              </table>
+            </div>
+            <div>
+              <Button onClick={copyToClipboard}>
+                Copier dans le Presse-papiers
+              </Button>
+            </div>
           </div>
-          <div>
-            <Button onClick={copyToClipboard}>
-              Copier dans le Presse-papiers
-            </Button>
-          </div>
-          <Toaster />
-        </>
+          <Steps />
+        </div>
       ) : (
         <p className="mt-4 text-gray-500">Aucune donnée soumise.</p>
       )}
+      <Toaster />
     </div>
   );
 }
