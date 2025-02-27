@@ -99,7 +99,7 @@ export function FormResult({ data }: FormResultProps) {
                     >
                       <img
                         alt="Suny logo"
-                        src="https://i.ibb.co/vPX7M2z/suny-logo-150.gif"
+                        src="https://uc191dfcad3812aaaea05608763f.previews.dropboxusercontent.com/p/thumb/ACj2AwQr82Y_QT0q7ccTa-ZgRC3UhLFR-ecirpCVfUaI8IVuJsbHXiADK2qlVN-_-gM2MFE-uLtfn5Qk8zoI5JgO4SUpHxoMpCCHMyawfN05ARQBeE4JMDmpvAyz8u-IaV3pLdTvLhVxXZk8xxv0OczGpNU8WVgyRtmAj7dCMJgK5UfZ2Lpo4ZliMkgcC5u6MX8TTAdQCHjQ1-m7qszzIJGJf83_Ickze2Ijv7sJgWVqTLsik03_cImMQVYDyGS5iISy1-H_ZDVUqJIQt4pf8kcFxXX_tJjArnEqxkd-Kweaok9Dzk9W0vjCTLZ2ytdwf2oGrneVR3O_eDSZgSoVYxg1dnZcEMZuTygLaC6O33PEjzwVJu2PbRNCEJgXC4cJDapOi9lekdk2jhD2qwQJ8LIn/p.gif"
                         style={{
                           borderStyle: "solid",
                           borderWidth: "0px",
@@ -169,7 +169,7 @@ export function FormResult({ data }: FormResultProps) {
                                     <td>
                                       <img
                                         alt="Phone icon"
-                                        src="https://i.ibb.co/xgBY5L9/phone.png"
+                                        src="https://ucd7481d23d5b9cd85d2f4b76adc.previews.dropboxusercontent.com/p/thumb/ACjgfmkXbqo-B1LVfDtAg8JBBFMZ1j8I4qgedNDoTEBMlUq6cXE7P1ftoCxF1Hw-Lj6igeUO6jPIc0EDQzARl7cjJPTDfFJUR33BM1S8MtJJ5L0pyS70z1yDz2AzTxfWuFoS_FljHK-zd166q-uCsNVflK0bF4bCEygB84fbFJ6c4jjr4XFuRyZlTEcUpH0jRUGOkYFSOoz956gFr9ZqBIBpeeSYgTWR-O0Z3pmwXltGhg6EyiZrgCgbOnJew6vl6eakkLJcNBD1kouyFE3SKpQE9YoLwoj6cgzGIMZun7oe-9ZJgUpbjjPTrsk5hJqxZHpIuL0_S3oBLVeTSnrkiKGG4MOXL-IX75CGXdAjVuTfMYuqNuWN3urrZYEuOkSTPTGenQivCPm9AoXMeme_evdx/p.png"
                                         style={iconStyle}
                                       />
                                     </td>
@@ -186,7 +186,7 @@ export function FormResult({ data }: FormResultProps) {
                                     <td style={tdIconStyle}>
                                       <img
                                         alt="Email icon"
-                                        src="https://i.ibb.co/w4rsjxz/mail.png"
+                                        src="https://uc7e69ca9487ed7a90b212c673c8.previews.dropboxusercontent.com/p/thumb/ACgDKLLHoBBzcTPc2XZGSkCZhxw4dI_FE_waZbBbHzxElnFhW_q-Eg0pCO0qg1qy4EZHl20fGj-K8CjFfQuS644KNRzgBoB6TPft6OzaFcfg4Wd_Lfg2P4JTyeLPy7QfOy8Ki5GXGcxvu6Wb4_-uFJ6ik908njhPkEND0E5BtlXbEBqD6ld8NWXt_z_z42xqh2O3Iu914TXBIxDKhjNEPOTTrEZkOnbDEttWMqCnsJNanERE1hpk-R11ROOA1evBfdA5egvPwE0wnE_nJCSuvTCgsBgyOJDB5pKCz5BGwt5tnUI395U4nnXasVmxF5RtsV4VgWOzjHDUXnYIwsRof1Ow1PXYgR3W2IOZ2_Y6ffkkqmtgOGnVIsvMWAFKnxRp5k4nyaNHc25kpKJo_BbhiH5x/p.png"
                                         style={iconStyle}
                                       />
                                     </td>
@@ -203,7 +203,7 @@ export function FormResult({ data }: FormResultProps) {
                                     <td>
                                       <img
                                         alt="address icon"
-                                        src="https://i.ibb.co/rwWTYnz/address.png"
+                                        src="https://ucf2ff55de134b3b7b4ca819740e.previews.dropboxusercontent.com/p/thumb/ACjxrHpVEyBpPAE8y6KUxgl_vsvT8RC9xDOqC4dcLpkJMWXNz8YqvVvvVZePw2RkW74UbvlE1AmoJrwY3aQ7Y-ZrH_-YJty_oV4Z3BO81IakrFkJgIa2anYM2QNJstLiX3uK5m9IgxiQUnm7qFZMR17NMRaCxgPp9lGWpRm-jgxWfI5Z5xE9qviOIhc4KduxvvWl61Hk27HevTzUKW0AeJmgWNqqc-DW1XZ6MpkellqHxu2yAhKRY3tgRZH2CAIoFHAlmpRcgQTvNU0PNW9Y7KK9T29dIDHGaZ-rVmnDiLxPHsVSOEF56vVjYW7JfbBdqpI9GKuspBgbU_aws0RY4hjVfKEQPAUvOQyRovu2ZJEYXxkox9EiJ50RtQyGouRHF6SK2g--tp5BCFi1FG9dN13x/p.png"
                                         style={iconStyle}
                                       />
                                     </td>
@@ -217,7 +217,7 @@ export function FormResult({ data }: FormResultProps) {
                                     <td>
                                       <img
                                         alt="url icon"
-                                        src="https://i.ibb.co/Rpq89fD/site.png"
+                                        src="https://ucfbea5ae73a9c87d9a18eced820.previews.dropboxusercontent.com/p/thumb/ACi1pLj1CsMNkqsgwS21J4Gfbn2Muy8yWdZYJUjhGFy3G29o0WUZre6r5p4dggIUyOWvSL6PdzmRDnosIcdeOJDPDs8z43dAAUlMbgBY2EkOFAtZ4olv_x92hAm1mT_ZFTNOuEf4OSAaavfdh-5r9EWMEJp4LBElygKRMCQMWnPSkL8P31nmcASyOji9Ugsrm1qU3h-zoUJCLD49VbnytzIxE1Elfz3IxFYujtt4A3r1wwoon2fpOAPWoEIfUVJQoz0dRYMTWvo2UJzatEXtYOSuUULdfnOzce_vKTnuKCpSoxTOV_SPcoZ5fL_oUjMHbFqVt7PXPbk1xuc8cv85ciH99Srv9miRwyfU9rFzbeMsLcQsbEmAshaooqH3t9uoTnOR8LCixHhE4xN_yHzb6_rF/p.png"
                                         style={iconStyle}
                                       />
                                     </td>
